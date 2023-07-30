@@ -22,7 +22,9 @@ mongoose.connection.on('error', (err) => {
 })
 
 // Middleware
-app.use(cors())
+app.use(cors({
+  origin: 'https://mern-frontend-eta.vercel.app'
+}))
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
